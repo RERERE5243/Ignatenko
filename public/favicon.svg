@@ -1,0 +1,19 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="0" y="0" width="256" height="256" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feOffset dy="6"/>
+      <feGaussianBlur stdDeviation="8"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.04 0 0 0 0 0.05 0 0 0 0 0.08 0 0 0 0.22 0"/>
+      <feBlend in2="SourceGraphic" result="shape"/>
+    </filter>
+    <radialGradient id="grad" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(92 82) rotate(48) scale(120)">
+      <stop stop-color="#FFB14B"/>
+      <stop offset="1" stop-color="#F18E1C"/>
+    </radialGradient>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <circle cx="128" cy="128" r="76" fill="url(#grad)"/>
+    <circle cx="102" cy="98" r="18" fill="white" fill-opacity="0.22"/>
+  </g>
+</svg>
