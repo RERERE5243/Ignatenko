@@ -1176,3 +1176,21 @@ textarea.input.error {
     opacity: 0.95 !important;
   }
 }
+
+/* rollback stronger hero shadow, keep metric cards hidden */
+@media (max-width: 640px) {
+  .page.theme-paving .hero-card,
+  .page.theme-bobcat .hero-card {
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  .page.theme-paving .hero-card::before,
+  .page.theme-bobcat .hero-card::before {
+    width: 240px !important;
+    height: 240px !important;
+    right: -80px !important;
+    bottom: -100px !important;
+    filter: blur(6px) !important;
+    opacity: 1 !important;
+  }
+}
