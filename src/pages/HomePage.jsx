@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom'
-import Container from '../components/Container'
-import Footer from '../components/Footer'
 import Header from '../components/Header'
-import { contactData } from '../data/siteContent'
+import Footer from '../components/Footer'
+import Container from '../components/Container'
 
 export default function HomePage() {
   return (
@@ -10,39 +9,46 @@ export default function HomePage() {
       <Header theme="paving" />
 
       <main>
-        <section className="hero-section">
+        <section className="hero-section home-chooser-section">
           <Container>
-            <div className="home-hero">
-              <div className="home-copy">
-                <div className="section-badge paving">Два направления • Один сильный коммерческий стиль</div>
-                <h1>Выберите направление услуг и откройте готовую продающую страницу</h1>
-                <p>
-                  Проект собран как единый современный сайт-визитка: отдельная страница под укладку плитки и отдельная страница под аренду Bobcat / мини-погрузчика.
-                </p>
-              </div>
+            <div className="home-chooser-intro">
+              <div className="section-badge paving">Выберите направление</div>
+              <h1>Два направления услуг</h1>
+              <p>
+                Выберите нужную страницу и сразу перейдите к заявке, стоимости и описанию услуги.
+              </p>
+            </div>
 
-              <div className="home-grid">
-                <Link to="/paving" className="choice-card paving">
-                  <span className="choice-label">Укладка плитки</span>
-                  <h2>/paving</h2>
-                  <p>Акцент на геометрии, основании, долговечности и аккуратном результате.</p>
-                  <span className="choice-link">Открыть страницу</span>
-                </Link>
+            <div className="home-chooser-grid">
+              <Link to="/paving" className="service-tile service-tile-paving">
+                <div className="service-tile-top">
+                  <span className="service-tile-tag">Укладка плитки</span>
+                </div>
 
-                <Link to="/bobcat" className="choice-card bobcat">
-                  <span className="choice-label">Аренда Bobcat</span>
-                  <h2>/bobcat</h2>
-                  <p>Быстрая подача техники, понятные условия и коммерческий фокус на заявках.</p>
-                  <span className="choice-link">Открыть страницу</span>
-                </Link>
-              </div>
+                <div className="service-tile-body">
+                  <h2>Плитка</h2>
+                  <p>Ровная геометрия, аккуратная укладка, понятная смета и долговечный результат.</p>
+                </div>
 
-              <div className="home-contacts">
-                <a href={contactData.phoneHref}>{contactData.phone}</a>
-                <a href={contactData.whatsappHref} target="_blank" rel="noreferrer">
-                  WhatsApp
-                </a>
-              </div>
+                <div className="service-tile-bottom">
+                  <span className="service-tile-action">Открыть страницу</span>
+                </div>
+              </Link>
+
+              <Link to="/bobcat" className="service-tile service-tile-bobcat">
+                <div className="service-tile-top">
+                  <span className="service-tile-tag">Аренда техники</span>
+                </div>
+
+                <div className="service-tile-body">
+                  <h2>Bobcat</h2>
+                  <p>Быстрая подача техники, удобный формат аренды и понятные условия по задаче.</p>
+                </div>
+
+                <div className="service-tile-bottom">
+                  <span className="service-tile-action">Открыть страницу</span>
+                </div>
+              </Link>
             </div>
           </Container>
         </section>
