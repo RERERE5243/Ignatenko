@@ -1151,3 +1151,28 @@ textarea.input.error {
     width: 100%;
   }
 }
+
+/* Remove hero metric squares on mobile for paving/bobcat pages */
+@media (max-width: 640px) {
+  .page.theme-paving .hero-card .hero-panel,
+  .page.theme-bobcat .hero-card .hero-panel {
+    display: none !important;
+  }
+
+  .page.theme-paving .hero-card,
+  .page.theme-bobcat .hero-card {
+    box-shadow:
+      0 18px 38px rgba(15, 23, 42, 0.08),
+      0 28px 60px rgba(15, 23, 42, 0.10) !important;
+  }
+
+  .page.theme-paving .hero-card::before,
+  .page.theme-bobcat .hero-card::before {
+    width: 260px !important;
+    height: 260px !important;
+    right: -70px !important;
+    bottom: -90px !important;
+    filter: blur(10px) !important;
+    opacity: 0.95 !important;
+  }
+}
